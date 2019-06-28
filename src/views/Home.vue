@@ -85,13 +85,17 @@
     </section>
     <!-- Team Section -->
     <section class="team">
-        <div class="flex-center center pad-20">
-            <h2>Our Team</h2>
+        <div class="center pad-20">
+            <h2>Our <strong>Team</strong></h2>
             <p>
                 The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’. It will
                 power three steem-based.
             </p>
-            <button class="primary">Get Certfied</button>
+             <el-row :gutter="0">
+            <el-col v-for="(member, index) in team" :key="index" :xs="8" :sm="8" :md="8" :lg="8" :xl="8">
+                <team :username="member.username" :position="member.position" :desc="member.desc" />
+            </el-col>
+             </el-row>
         </div>
     </section>
     <!-- Buy Section -->
@@ -151,6 +155,7 @@
 
 <script>
 import community from '@/components/community.vue'
+import team from '@/components/team.vue'
 export default {
     name: "home",
     data() {
@@ -178,11 +183,26 @@ export default {
                 buttonText: 'Coming Soon',
                 url: 'www.google.com',
                 active: false
+            }],
+            team: [{
+                username: 'surpassinggoogle',
+                position: 'Founder',
+                desc: 'The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’'
+            },
+            {
+                username: 'tobias-g',
+                position: 'Developer',
+                desc: 'The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’'
+            },{
+                username: 'eastmael',
+                position: 'Developer',
+                desc: 'The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’'
             }]
         }
     },
     components: {
-        community
+        community,
+        team
     }
 };
 </script>
@@ -328,8 +348,15 @@ export default {
     }
 }
 
+.team {
+    h2 {
+        color: #5FBDD8;
+    }
+}
+
 .certified {
-    background-image: url(/img/collage.5a4a2105.png);
+    background-image: url(../assets/img/collage.png);
+    background-size: contain;
     color: white;
 
     .overlay {

@@ -27,6 +27,14 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 7.5px;
 }
 
+h4, h5 {
+  letter-spacing: initial;
+}
+
+h4 {
+  font-weight: bold;
+}
+
 p {
     font-weight: lighter;
     line-height: 25px;
@@ -55,11 +63,16 @@ button {
     background: 0;
     border: 2px solid #fff;
     color: #fff;
+    &.blue {
+      color: #5FBDD8;
+      border-color: #5FBDD8;
+    }
   }
   &.primary {
     color: #fff;
     background: #5FBDD8;;
     border: 1px solid #5FBDD8;
   }
+
 }
 </style>
