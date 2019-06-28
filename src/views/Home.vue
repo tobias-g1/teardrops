@@ -52,12 +52,21 @@
     <!-- Communities Section -->
     <section class="communities">
         <div class="flex-center center">
-            <h2>Our Communties</h2>
+            <div class="header-desc">
+            <h2>Our <strong>Communties</strong></h2>
             <p>
                 The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’. It will
                 power three steem-based social-network platforms namely; ULOGS.ORG, STEEMGIGS.ORG &
                 MACROHARD, all of which apply a ‘mining the human’ model.
             </p>
+            </div>
+            <el-row :gutter="0">
+            <div>
+                <el-col v-for="(community, index) in communities" :key="index" :xs="8" :sm="8" :md="8" :lg="8" :xl="8">
+                    <community  :header="community.header" :desc="community.desc" :image="community.image" :active="community.active" :buttonText="community.buttonText" :url="community.url" />
+                </el-col>
+            </div>
+        </el-row>
         </div>
     </section>
     <!-- Certified Section -->
@@ -141,8 +150,40 @@
 </template>
 
 <script>
+import community from '@/components/community.vue'
 export default {
-    name: "home"
+    name: "home",
+    data() {
+        return {
+            communities: [{
+                header: 'Steem Gigs',
+                desc: 'The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’. ',
+                image: require("@/assets/img/steemgigs.png"),
+                buttonText: 'Explore',
+                url: 'https://steemgigs.org',
+                active: true
+            },
+            {
+                header: 'Ulogs',
+                desc: 'The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’. ',
+                image: require("@/assets/img/ulogs.png"),
+                buttonText: 'Explore',
+                url: 'www.google.com',
+                active: true
+            },
+            {
+                header: 'Macrohand',
+                desc: 'The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’. ',
+                image: require("@/assets/img/macro.png"),
+                buttonText: 'Coming Soon',
+                url: 'www.google.com',
+                active: false
+            }]
+        }
+    },
+    components: {
+        community
+    }
 };
 </script>
 
@@ -224,6 +265,14 @@ export default {
                 width: fit-content;
                 margin: auto;
             }
+        }
+    }
+
+    .communities {
+        .header-desc {
+            width: 50%;
+            min-width: 400px;
+            margin: auto;
         }
     }
 
