@@ -41,14 +41,14 @@ p {
 }
 
 .pad-20 {
-  padding: 20px;
+  padding: 50px;
 } 
 .center {
   text-align: center;
 }
 button {
-  padding: 15px;
-  font-size: 15px;
+  padding: 10px 12px;
+  font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 5px;
   &.outline {

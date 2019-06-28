@@ -83,13 +83,15 @@
     </section>
     <!-- Buy Section -->
     <section class="buy">
-        <div class="flex-center pad-20 center">
-            <h2>Buy Teardrops</h2>
-            <p>
-                The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’. It will
-                power three steem-based.
-            </p>
-            <button class="outline">Buy Now</button>
+        <div class="overlay">
+            <div class="details pad-20">
+                <h2>Buy <br> <strong>Teardrops</strong></h2>
+                <p>
+                    The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’. It will
+                    power three steem-based.
+                </p>
+                <button class="outline">Buy Now</button>
+            </div>
         </div>
     </section>
     <!-- Support Section -->
@@ -198,11 +200,28 @@ export default {
         }
     }
 
+    .buy {
+        background-image: url(../assets/img/buy.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: #fff;
+        background-position: center;
+
+        .overlay {
+            background: rgba(33, 20, 44, 0.75);
+
+            .details {
+                width: 35%;
+                min-width: 400px;
+            }
+        }
+    }
+
     .support {
         color: #fff;
 
         .delegate {
-            background-image: url(../assets/img/hands.png);
+            background-image: url(../assets/img/delegate.png);
             background-repeat: no-repeat;
             background-size: cover;
 
@@ -218,7 +237,7 @@ export default {
         }
 
         .vote {
-            background-image: url(../assets/img/hands.png);
+            background-image: url(../assets/img/vote.png);
             background-repeat: no-repeat;
             background-size: cover;
 
