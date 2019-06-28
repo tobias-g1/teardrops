@@ -27,10 +27,10 @@
     </section>
     <!-- Video Section -->
     <section class="video">
-        <el-row :gutter="0" class="pad-20">
+        <el-row :gutter="0" class="pad-20 description-row">
             <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
                 <div class="center">
-                    <h2>The Teardrops Economy</h2>
+                    <h2>The <strong>Teardrops Economy</strong></h2>
                     <p>
                         The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’. It will
                         power three steem-based social-network platforms namely; ULOGS.ORG, STEEMGIGS.ORG &
@@ -42,7 +42,9 @@
         <el-row :gutter="0">
             <div class="flex-center center">
                 <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/57iAFUzXPGk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="video-container">
+                        <youtube video-id="57iAFUzXPGk"></youtube>
+                    </div>
                 </el-col>
             </div>
         </el-row>
@@ -68,7 +70,7 @@
                     power three steem-based social-network platforms namely; ULOGS.ORG, STEEMGIGS.ORG &
                     MACROHARD, all of which apply a ‘mining the human’ model.
                 </p>
-                <button class="primary">Get Certfied</button>
+                <button class="primary">Get Certified</button>
             </div>
         </div>
     </section>
@@ -179,7 +181,7 @@ export default {
             background-size: cover;
 
             .overlay {
-                height: 489px;
+                height: 477.5px;
                 background: rgba(255, 255, 255, 0.75);
             }
         }
@@ -202,72 +204,95 @@ export default {
         }
     }
 
-    .buy {
-        background-image: url(../assets/img/buy.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        color: #fff;
-        background-position: center;
-
-        .overlay {
-            background: rgba(33, 20, 44, 0.75);
-
-            .details {
-                width: 35%;
-                min-width: 400px;
+    .video {
+        background: linear-gradient(180deg, #F7F7F7 80%, #fff 00%);
+        .description-row {
+            width: 50%;
+            min-width: 400px;
+            margin: auto;
+            display: block;
+            padding-bottom: 0;
+            h2 {
+                color: rgba(95, 189, 216, 1);
             }
         }
-    }
-
-    .support {
-        color: #fff;
-
-        .delegate {
-            background-image: url(../assets/img/delegate.png);
-            background-repeat: no-repeat;
-            background-size: cover;
-
-            .overlay {
-                background: rgba(95, 189, 216, 0.9);
-
-                .details {
-                    width: 75%;
-                    padding: 50px;
-                }
-            }
-
-        }
-
-        .vote {
-            background-image: url(../assets/img/vote.png);
-            background-repeat: no-repeat;
-            background-size: cover;
-
-            .overlay {
-                background: rgba(71, 221, 175, 0.9);
-
-                .details {
-                    width: 75%;
-                    padding: 50px;
-                }
-            }
-        }
-    }
-
-    .certified {
-        background-image: url(/img/collage.5a4a2105.png);
-        color: white;
-
-        .overlay {
-            background: rgba(33, 20, 44, 0.9);
-
-            .details {
-                width: 50%;
-                min-width: 400px;
-                display: block;
+        div {
+            .video-container {
+                padding: 20px;
+                border-radius: 20px;
+                background: #fff;
+                width: fit-content;
                 margin: auto;
             }
         }
     }
+
+.buy {
+    background-image: url(../assets/img/buy.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    background-position: center;
+
+    .overlay {
+        background: rgba(33, 20, 44, 0.75);
+
+        .details {
+            width: 35%;
+            min-width: 400px;
+        }
+    }
+}
+
+.support {
+    color: #fff;
+
+    .delegate {
+        background-image: url(../assets/img/delegate.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .overlay {
+            background: rgba(95, 189, 216, 0.9);
+
+            .details {
+                width: 75%;
+                padding: 50px;
+            }
+        }
+
+    }
+
+    .vote {
+        background-image: url(../assets/img/vote.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .overlay {
+            background: rgba(71, 221, 175, 0.9);
+
+            .details {
+                width: 75%;
+                padding: 50px;
+            }
+        }
+    }
+}
+
+.certified {
+    background-image: url(/img/collage.5a4a2105.png);
+    color: white;
+
+    .overlay {
+        background: rgba(33, 20, 44, 0.9);
+
+        .details {
+            width: 50%;
+            min-width: 400px;
+            display: block;
+            margin: auto;
+        }
+    }
+}
 }
 </style>
