@@ -15,13 +15,22 @@ h1, h2, h3, h4, h5, h6, p {
     font-family: 'Roboto', sans-serif;
 }
 
+h2 {
+  font-size: 30px;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-weight: lighter;
     text-transform: uppercase;
+    line-height: 40px;
+    margin: 0;
+    letter-spacing: 7.5px;
 }
 
 p {
-    font-weight: normal;
+    font-weight: lighter;
+    line-height: 25px;
+    font-size: 14px;
 }
 
 .flex-center {
@@ -36,5 +45,21 @@ p {
 } 
 .center {
   text-align: center;
+}
+button {
+  padding: 15px;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  &.outline {
+    background: 0;
+    border: 2px solid #fff;
+    color: #fff;
+  }
+  &.primary {
+    color: #fff;
+    background: #5FBDD8;;
+    border: 1px solid #5FBDD8;
+  }
 }
 </style>
