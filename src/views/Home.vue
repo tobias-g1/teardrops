@@ -93,26 +93,30 @@
         </div>
     </section>
     <!-- Support Section -->
-    <section>
+    <section class="support">
         <el-row :gutter="0">
-            <el-col :xs="12" :sm="12" :md="12" :lg="12" :xl="12">
-                <div class="pad-20">
-                    <h2>Delegate Steem Power</h2>
-                    <p>
-                        The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’. It will
-                        power three steem-based.
-                    </p>
-                    <button class="outline">Delegate Now</button>
+            <el-col :xs="12" :sm="12" :md="12" :lg="12" :xl="12" class="delegate">
+                <div class="overlay">
+                    <div class="pad-20 details">
+                        <h2>Delegate <br> <strong>Steem Power</strong></h2>
+                        <p>
+                            The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’. It will
+                            power three steem-based.
+                        </p>
+                        <button class="outline">Delegate Now</button>
+                    </div>
                 </div>
             </el-col>
-            <el-col :xs="12" :sm="12" :md="12" :lg="12" :xl="12">
-                <div class="pad-20">
-                    <h2>Vote for us</h2>
-                    <p>
-                        The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’. It will
-                        power three steem-based.
-                    </p>
-                    <button class="outline">Vote Now</button>
+            <el-col :xs="12" :sm="12" :md="12" :lg="12" :xl="12" class="vote">
+                <div class="overlay">
+                    <div class="pad-20 details">
+                        <h2>Vote <br> for <strong>us</strong></h2>
+                        <p>
+                            The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’. It will
+                            power three steem-based.
+                        </p>
+                        <button class="outline">Vote Now</button>
+                    </div>
                 </div>
             </el-col>
         </el-row>
@@ -189,6 +193,41 @@ export default {
                     min-width: 400px;
                     padding: 50px;
                     color: white;
+                }
+            }
+        }
+    }
+
+    .support {
+        color: #fff;
+
+        .delegate {
+            background-image: url(../assets/img/hands.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            .overlay {
+                background: rgba(95, 189, 216, 0.9);
+
+                .details {
+                    width: 75%;
+                    padding: 50px;
+                }
+            }
+
+        }
+
+        .vote {
+            background-image: url(../assets/img/hands.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            .overlay {
+                background: rgba(71, 221, 175, 0.9);
+
+                .details {
+                    width: 75%;
+                    padding: 50px;
                 }
             }
         }
