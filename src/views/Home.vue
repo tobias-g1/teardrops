@@ -59,15 +59,17 @@
         </div>
     </section>
     <!-- Certified Section -->
-    <section class="certified">
-        <div class="flex-center center pad-20">
-            <h2>Get Certified</h2>
-            <p>
-                The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’. It will
-                power three steem-based social-network platforms namely; ULOGS.ORG, STEEMGIGS.ORG &
-                MACROHARD, all of which apply a ‘mining the human’ model.
-            </p>
-            <button class="primary">Get Certfied</button>
+    <section class="certified flex-center">
+        <div class="overlay">
+            <div class="details center pad-20">
+                <h2>Get <strong>Certified</strong></h2>
+                <p>
+                    The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’. It will
+                    power three steem-based social-network platforms namely; ULOGS.ORG, STEEMGIGS.ORG &
+                    MACROHARD, all of which apply a ‘mining the human’ model.
+                </p>
+                <button class="primary">Get Certfied</button>
+            </div>
         </div>
     </section>
     <!-- Team Section -->
@@ -248,6 +250,22 @@ export default {
                     width: 75%;
                     padding: 50px;
                 }
+            }
+        }
+    }
+
+    .certified {
+        background-image: url(/img/collage.5a4a2105.png);
+        color: white;
+
+        .overlay {
+            background: rgba(33, 20, 44, 0.9);
+
+            .details {
+                width: 50%;
+                min-width: 400px;
+                display: block;
+                margin: auto;
             }
         }
     }
