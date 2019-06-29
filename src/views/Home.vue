@@ -44,7 +44,7 @@
             <div class="flex-center center">
                 <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
                     <div class="video-container">
-                        <youtube video-id="57iAFUzXPGk" player-width="100%"></youtube>
+                        <youtube video-id="1PpG5hhlv44" player-width="100%"></youtube>
                     </div>
                 </el-col>
             </div>
@@ -76,11 +76,9 @@
             <div class="details center pad-20">
                 <h2>Get <strong>Certified</strong></h2>
                 <p>
-                    The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’. It will
-                    power three steem-based social-network platforms namely; ULOGS.ORG, STEEMGIGS.ORG &
-                    MACROHARD, all of which apply a ‘mining the human’ model.
+                    The entire teardrops SMT ecosystem is build around a grey-list of certified uloggers. This list will grow over the course of time and 'all value' will be built around this list. Each certified ulogger will have exclusive UI-perks across all three interfaces under the umbrella the teardrops ecosystem and a tangible say in the dynamics of the token
                 </p>
-                <button class="primary">Get Certified</button>
+                <a href="https://ulogs.org/dtube/@surpassinggoogle/syi5zn5a" target="_blank" rel="noopener noreferrer"><button class="primary">Get Certified</button></a>
             </div>
         </div>
     </section>
@@ -89,8 +87,7 @@
         <div class="center pad-20">
             <h2>Our <strong>Team</strong></h2>
             <p>
-                The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’. It will
-                power three steem-based.
+                We have a large community of some 5,500 steemians. Over the course of time, we will focus on growing our grey-list of certified uloggers. These ones will form a core part of our team. In coming months, we will begin to populate these page with core members of our team. Our team needs to represent 'teardrops', hence time must fly past.
             </p>
             <el-row :gutter="0">
                 <el-col v-for="(member, index) in team" :key="index" :xs="24" :sm="24" :md="8" :lg="8" :xl="8">
@@ -107,10 +104,9 @@
                     <div class="pad-20 details">
                         <h2>Delegate <br> <strong>Steem Power</strong></h2>
                         <p>
-                            The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’. It will
-                            power three steem-based.
+                            Delegate steem power to '@steemgigs' to help support our curation and development efforts.
                         </p>
-                        <a href="https://app.steemconnect.com/sign/delegate-vesting-shares?delegatee=steemgigs&vesting_shares=100%20SP" target="_blank" rel="noopener noreferrer"><button class="outline">Delegate Now</button></a>
+                        <a href="https://steem.tools/delegate/?delegatee=steemgigs&name=Steem+Gigs&www=https%3A%2F%2Fbusy.org%2F%40steemgigs&message=Steem+Gigs+is+a+platform+allowing+steemians+to+buy+and+sell+services+in+a+peer-to-peer+fashion.+Support+us+on+our+journey+with+your+delegation%21+Any+amount+is+appreciated%21" target="_blank" rel="noopener noreferrer"><button class="outline">Delegate Now</button></a>
                     </div>
                 </div>
             </el-col>
@@ -119,8 +115,7 @@
                     <div class="pad-20 details">
                         <h2>Vote <br> for <strong>us</strong></h2>
                         <p>
-                            The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’. It will
-                            power three steem-based.
+                            Our witness represent that "everyone has something to offer". You can vote for the 'steemgigs' witness to support us.
                         </p>
                         <a href="https://app.steemconnect.com/sign/account-witness-vote?witness=steemgigs&approve=1" target="_blank" rel="noopener noreferrer"><button class="outline">Vote Now</button></a>
                     </div>
@@ -145,10 +140,9 @@
     <section class="mailing-list">
         <div class="pad-20 mail-container">
             <div class="mail-header">
-                <h2>Mailing List</h2>
+                <h2><strong>Mailing</strong> List</h2>
                 <p>
-                    The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’. It will
-                    power three steem-based.
+                  Use the the form below to register your email to keep up to date with updates and Teardrops events.
                 </p>
             </div>
             <!-- Begin Mailchimp Signup Form -->
@@ -188,7 +182,7 @@ export default {
         return {
             communities: [{
                     header: 'Steem Gigs',
-                    desc: 'The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’. ',
+                    desc: 'A freelance market place built on the Steem Blockchain’. ',
                     image: require("@/assets/img/steemgigs.png"),
                     buttonText: 'Explore',
                     url: 'https://steemgigs.org',
@@ -204,10 +198,10 @@ export default {
                 },
                 {
                     header: 'Macrohard',
-                    desc: 'The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’. ',
+                    desc: 'Empowering developers all around the world’. ',
                     image: require("@/assets/img/macro.png"),
                     buttonText: 'Explore',
-                    url: 'www.google.com',
+                    url: 'macrohard.pro',
                     active: true
                 }
             ],
@@ -219,11 +213,11 @@ export default {
                 {
                     username: 'tobias-g',
                     position: 'Developer',
-                    desc: 'The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’'
+                    desc: 'Developing over 5 years and a fundamental part of the Steem Gigs development.’'
                 }, {
                     username: 'eastmael',
                     position: 'Developer',
-                    desc: 'The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’'
+                    desc: 'Experienced developer with many years of experiences, built the foundation for Ulogs.’'
                 }
             ]
         }
