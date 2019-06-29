@@ -157,7 +157,7 @@
                     <div id="mc_embed_signup_scroll">
                         <div class="mc-field-group">
                             <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span></label>
-                            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Enter Email">
                             </div>
                             <div id="mce-responses" class="clear">
                                 <div class="response" id="mce-error-response" style="display:none"></div>
@@ -255,7 +255,7 @@ export default {
                 width: 50%;
                 display: block;
                 margin: auto;
-                min-width: 400px;
+                min-width: 250px;
             }
         }
     }
@@ -282,7 +282,7 @@ export default {
 
                 .details {
                     width: 50%;
-                    min-width: 400px;
+                    min-width: 250px;
                     padding: 50px;
                     color: white;
                 }
@@ -295,7 +295,7 @@ export default {
 
         .description-row {
             width: 50%;
-            min-width: 400px;
+            min-width: 250px;
             margin: auto;
             display: block;
             padding-bottom: 0;
@@ -313,7 +313,7 @@ export default {
                 width: fit-content;
                 margin: auto;
                 width: 50%;
-                min-width: 400px;
+                min-width: 250px;
             }
         }
     }
@@ -321,7 +321,7 @@ export default {
     .communities {
         .header-desc {
             width: 50%;
-            min-width: 400px;
+            min-width: 250px;
             margin: auto;
         }
     }
@@ -338,7 +338,7 @@ export default {
 
             .details {
                 width: 35%;
-                min-width: 400px;
+                min-width: 250px;
             }
         }
     }
@@ -394,7 +394,7 @@ export default {
 
             .details {
                 width: 50%;
-                min-width: 400px;
+                min-width: 250px;
                 display: block;
                 margin: auto;
             }
@@ -405,7 +405,7 @@ export default {
 
         .mail-container {
             width: 50%;
-            min-width: 400px;
+            min-width: 250px;
             display: block;
             margin: auto;
 
@@ -429,6 +429,7 @@ export default {
                     /* Mozilla-based browsers will ignore this. */
                     width: fill-available;
                     display: inline-block;
+                    border: 1px solid #F7F7F7;
                 }
 
                 input[type="submit"] {
