@@ -5,11 +5,11 @@
             Teardrops
         </h3>
         <ul class="nav-options">
-            <a v-smooth-scroll="{ duration: 700, offset: -100}" href="#about"><li>About</li></a>
-            <a v-smooth-scroll="{ duration: 700, offset: -100}" href="#communities"><li>Communities</li></a>
-            <a v-smooth-scroll="{ duration: 700, offset: -100}" href="#certified"><li>Certified</li></a>
-            <a v-smooth-scroll="{ duration: 700, offset: -100}" href="#support"><li>Support</li></a>
-            <a v-smooth-scroll="{ duration: 700, offset: -100}" href="#buy"><li><button class="primary">Buy Teardrops</button></li></a>
+            <a class="simple" v-smooth-scroll="{ duration: 700, offset: -100}" href="#about"><li>About</li></a>
+            <a class="simple" v-smooth-scroll="{ duration: 700, offset: -100}" href="#communities"><li>Communities</li></a>
+            <a class="simple" v-smooth-scroll="{ duration: 700, offset: -100}" href="#certified"><li>Certified</li></a>
+            <a class="simple" v-smooth-scroll="{ duration: 700, offset: -100}" href="#support"><li>Support</li></a>
+            <a v-smooth-scroll="{ duration: 700, offset: -100}" href="#buy"><li><button class="primary">Buy</button></li></a>
         </ul>
     </div>
 </div>
@@ -60,6 +60,13 @@ export default {
                 color: white;
             }
         }
+    }
+
+}
+
+@media only screen and (max-width: 992px) {
+   .simple {
+        display: none;
     }
 }
 </style>

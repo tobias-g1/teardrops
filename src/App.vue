@@ -65,6 +65,7 @@ button {
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 5px;
+  cursor: pointer;
   &.outline {
     background: 0;
     border: 2px solid #fff;

@@ -13,7 +13,7 @@
             <el-col class="img-column" :xs="8" :sm="8" :md="8" :lg="8" :xl="8">
                 <div class="overlay"></div>
             </el-col>
-            <el-col :xs="16" :sm="16" :md="16" :lg="16" :xl="16" class="about">
+            <el-col :xs="24" :sm="24" :md="16" :lg="16" :xl="16" class="about">
                 <div class="overlay">
                     <div class="details">
                         <h2>Rewarding <br> Proof of <br> <strong>Tears</strong></h2>
@@ -44,7 +44,7 @@
             <div class="flex-center center">
                 <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
                     <div class="video-container">
-                        <youtube video-id="57iAFUzXPGk"></youtube>
+                        <youtube video-id="57iAFUzXPGk" player-width="100%" ></youtube>
                     </div>
                 </el-col>
             </div>
@@ -63,7 +63,7 @@
             </div>
             <el-row :gutter="0">
                 <div>
-                    <el-col v-for="(community, index) in communities" :key="index" :xs="8" :sm="8" :md="8" :lg="8" :xl="8">
+                    <el-col v-for="(community, index) in communities" :key="index" :xs="24" :sm="24" :md="8" :lg="8" :xl="8">
                         <community :header="community.header" :desc="community.desc" :image="community.image" :active="community.active" :buttonText="community.buttonText" :url="community.url" />
                     </el-col>
                 </div>
@@ -93,7 +93,7 @@
                 power three steem-based.
             </p>
             <el-row :gutter="0">
-                <el-col v-for="(member, index) in team" :key="index" :xs="8" :sm="8" :md="8" :lg="8" :xl="8">
+                <el-col v-for="(member, index) in team" :key="index" :xs="24" :sm="24" :md="8" :lg="8" :xl="8">
                     <team :username="member.username" :position="member.position" :desc="member.desc" />
                 </el-col>
             </el-row>
@@ -102,7 +102,7 @@
     <!-- Support Section -->
     <section class="support" id="support">
         <el-row :gutter="0">
-            <el-col :xs="12" :sm="12" :md="12" :lg="12" :xl="12" class="delegate">
+            <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12" class="delegate">
                 <div class="overlay">
                     <div class="pad-20 details">
                         <h2>Delegate <br> <strong>Steem Power</strong></h2>
@@ -114,7 +114,7 @@
                     </div>
                 </div>
             </el-col>
-            <el-col :xs="12" :sm="12" :md="12" :lg="12" :xl="12" class="vote">
+            <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12" class="vote">
                 <div class="overlay">
                     <div class="pad-20 details">
                         <h2>Vote <br> for <strong>us</strong></h2>
@@ -236,6 +236,7 @@ export default {
                 width: 50%;
                 display: block;
                 margin: auto;
+                min-width: 400px;
             }
         }
     }
@@ -292,6 +293,8 @@ export default {
                 background: #fff;
                 width: fit-content;
                 margin: auto;
+                width: 50%;
+                min-width: 400px;
             }
         }
     }
@@ -377,6 +380,12 @@ export default {
                 margin: auto;
             }
         }
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .img-column {
+        display: none;
     }
 }
 </style>
