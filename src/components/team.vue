@@ -4,7 +4,7 @@
     <h4> {{ username }} </h4>
     <h5> {{ position }} </h5>
     <p> {{ desc }} </p>
-    <a :href="link" target="_blank" rel="noopener noreferrer"><button class="outline blue">View More</button></a>
+    <a :href="link" target="_blank" rel="noopener noreferrer"><button class="outline blue">Learn More</button></a>
 </div>
 </template>
 

@@ -26,7 +26,7 @@ export default {
 <style lang="scss">
 .community-card {
     text-align: center;
-    padding: 50px;
+    padding: 20px 50px 50px 50px;
 
     .img-wrapper {
         height: 225px;
@@ -50,6 +50,8 @@ export default {
         font-weight: bold;
     }
 
-    p {}
+    p {
+        margin-top: 0;
+    }
 }
 </style>

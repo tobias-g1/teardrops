@@ -83,11 +83,13 @@
     </section>
     <!-- Team Section -->
     <section class="team">
-        <div class="center pad-20">
-            <h2>Our <strong>Team</strong></h2>
-            <p>
-                We have a large community of some 5,500 steemians. Over the course of time, we will focus on growing our grey-list of certified uloggers. These ones will form a core part of our team. In coming months, we will begin to populate these page with core members of our team. Our team needs to represent 'teardrops', hence time must fly past.
-            </p>
+        <div class="center">
+            <div class="details">
+                <h2>Our <strong>Team</strong></h2>
+                <p>
+                    We have a large community of some 5,500 steemians. These ones will form a core part of our team. In coming months, we will begin to populate these page with core members of our team. Our team needs to represent 'teardrops', hence time must fly past.
+                </p>
+            </div>
             <el-row :gutter="0">
                 <el-col v-for="(member, index) in team" :key="index" :xs="24" :sm="24" :md="8" :lg="8" :xl="8">
                     <team :username="member.username" :position="member.position" :desc="member.desc" />
@@ -141,7 +143,7 @@
             <div class="mail-header">
                 <h2><strong>Mailing</strong> List</h2>
                 <p>
-                  Use the the form below to register your email to keep up to date with updates and Teardrops events.
+                    Use the the form below to register your email to keep up to date with updates and Teardrops events.
                 </p>
             </div>
             <!-- Begin Mailchimp Signup Form -->
@@ -258,7 +260,7 @@ export default {
             background-size: cover;
 
             .overlay {
-                height: 477.5px;
+                height: 443.5px;
                 background: rgba(255, 255, 255, 0.75);
             }
         }
@@ -269,7 +271,7 @@ export default {
             background-size: cover;
 
             .overlay {
-                background: rgba(95, 189, 216, 0.9);
+                background: rgba(95, 189, 216, 0.93);
 
                 .details {
                     width: 50%;
@@ -343,7 +345,7 @@ export default {
             background-size: cover;
 
             .overlay {
-                background: rgba(95, 189, 216, 0.9);
+                background: rgba(95, 189, 216, 0.93);
 
                 .details {
                     width: 75%;
@@ -359,7 +361,7 @@ export default {
             background-size: cover;
 
             .overlay {
-                background: rgba(71, 221, 175, 0.9);
+                background: rgba(71, 221, 175, 0.93);
 
                 .details {
                     width: 75%;
@@ -370,18 +372,24 @@ export default {
     }
 
     .team {
-        h2 {
-            color: #5FBDD8;
+        .details {
+            width: 50%;
+            min-width: 250px;
+            margin: auto;
+
+            h2 {
+                color: #5FBDD8;
+            }
         }
     }
 
     .certified {
         background-image: url(../assets/img/collage.png);
         background-size: contain;
-        color: white;
+        color: #fff;
 
         .overlay {
-            background: rgba(33, 20, 44, 0.9);
+            background: rgba(33, 20, 44, 0.93);
 
             .details {
                 width: 50%;
@@ -393,6 +401,7 @@ export default {
     }
 
     .mailing-list {
+        background: #F7F7F7;
 
         .mail-container {
             width: 50%;
@@ -402,6 +411,10 @@ export default {
 
             .mail-header {
                 text-align: center;
+
+                h2 {
+                    color: #5FBDD8;
+                }
             }
 
             form {
@@ -412,13 +425,13 @@ export default {
                 }
 
                 input[type="email"] {
-                    padding: 8px;
+                    padding: 10px;
                     width: 100%;
                     width: -moz-available;
                     /* WebKit-based browsers will ignore this. */
                     width: -webkit-fill-available;
                     /* Mozilla-based browsers will ignore this. */
-                    width: fill-available;
+                    width: stretch;
                     display: inline-block;
                     border: 1px solid #F7F7F7;
                 }
@@ -434,6 +447,7 @@ export default {
                     width: 100%;
                     color: white;
                     margin-top: 15px;
+                    cursor: pointer;
                 }
             }
 
