@@ -17,7 +17,7 @@ section {
   scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, h5, h6, p, li {
+h1, h2, h3, h4, h5, h6, p, li, label {
     font-family: 'Roboto', sans-serif;
 }
 
@@ -45,6 +45,10 @@ p {
     font-weight: lighter;
     line-height: 25px;
     font-size: 14px;
+}
+
+label {
+  font-weight: lighter;
 }
 
 .flex-center {

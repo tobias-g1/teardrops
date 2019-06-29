@@ -44,7 +44,7 @@
             <div class="flex-center center">
                 <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
                     <div class="video-container">
-                        <youtube video-id="57iAFUzXPGk" player-width="100%" ></youtube>
+                        <youtube video-id="57iAFUzXPGk" player-width="100%"></youtube>
                     </div>
                 </el-col>
             </div>
@@ -142,13 +142,32 @@
         </div>
     </section>
     <!-- Mail List Section -->
-    <section>
-        <div class="pad-20 flex-center center">
-            <h2>Mailing List</h2>
-            <p>
-                The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’. It will
-                power three steem-based.
-            </p>
+    <section class="mailing-list">
+        <div class="pad-20 mail-container">
+            <div class="mail-header">
+                <h2>Mailing List</h2>
+                <p>
+                    The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’. It will
+                    power three steem-based.
+                </p>
+            </div>
+            <!-- Begin Mailchimp Signup Form -->
+            <div id="mc_embed_signup">
+                <form action="https://ulogs.us19.list-manage.com/subscribe/post?u=8857d3b21fbc07875a64874ac&amp;id=a737966e09" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <div id="mc_embed_signup_scroll">
+                        <div class="mc-field-group">
+                            <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span></label>
+                            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                            </div>
+                            <div id="mce-responses" class="clear">
+                                <div class="response" id="mce-error-response" style="display:none"></div>
+                                <div class="response" id="mce-success-response" style="display:none"></div>
+                            </div> <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_8857d3b21fbc07875a64874ac_a737966e09" tabindex="-1" value=""></div>
+                                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                                </div>
+                </form>
+            </div>
         </div>
     </section>
 </div>
@@ -379,6 +398,53 @@ export default {
                 display: block;
                 margin: auto;
             }
+        }
+    }
+
+    .mailing-list {
+
+        .mail-container {
+            width: 50%;
+            min-width: 400px;
+            display: block;
+            margin: auto;
+
+            .mail-header {
+                text-align: center;
+            }
+
+            form {
+
+                label {
+                    display: block;
+                    font-size: 13px;
+                }
+
+                input[type="email"] {
+                    padding: 8px;
+                    width: 100%;
+                    width: -moz-available;
+                    /* WebKit-based browsers will ignore this. */
+                    width: -webkit-fill-available;
+                    /* Mozilla-based browsers will ignore this. */
+                    width: fill-available;
+                    display: inline-block;
+                }
+
+                input[type="submit"] {
+                    padding: 10px 12px;
+                    font-size: 13px;
+                    text-transform: uppercase;
+                    letter-spacing: 5px;
+                    background: #5FBDD8;
+                    border-color: #5FBDD8;
+                    display: inline-block;
+                    width: 100%;
+                    color: white;
+                    margin-top: 15px;
+                }
+            }
+
         }
     }
 }
