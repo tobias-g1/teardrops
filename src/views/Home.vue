@@ -1,6 +1,5 @@
 <template>
 <div class="home">
-    <navbar />
     <!-- Hero Section -->
     <section class="hero">
         <div class="overlay">
@@ -170,13 +169,11 @@
 <script>
 import community from '@/components/community.vue'
 import team from '@/components/team.vue'
-import navbar from '@/components/nav.vue'
 export default {
     name: "home",
     components: {
         community,
-        team,
-        navbar
+        team
     },
     data() {
         return {

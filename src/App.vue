@@ -1,8 +1,19 @@
 <template>
   <div id="app">
+    <navbar />
     <router-view />
   </div>
 </template>
+<script>
+import navbar from '@/components/nav.vue'
+export default {
+  name: 'app',
+  components: {
+    navbar
+  }
+}
+</script>
+
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&display=swap');
