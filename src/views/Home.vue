@@ -55,9 +55,7 @@
             <div class="header-desc">
                 <h2>Our <strong>Communties</strong></h2>
                 <p>
-                    The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’. It will
-                    power three steem-based social-network platforms namely; ULOGS.ORG, STEEMGIGS.ORG &
-                    MACROHARD, all of which apply a ‘mining the human’ model.
+                    The Teardrops token will be shared across multiple interfaces allow users to interact in multiple communities. These are the communities of Teardrops.
                 </p>
             </div>
             <el-row :gutter="0">
@@ -130,8 +128,7 @@
             <div class="details">
                 <h2>Buy <br> <strong>Teardrops</strong></h2>
                 <p>
-                    The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’. It will
-                    power three steem-based.
+                  Teardrops are available today on Steem Engine, click the button below to get yours today. 
                 </p>
                 <a href="https://steem-engine.com/?p=market&t=TEARDROPS" target="_blank" rel="noopener noreferrer"><button class="outline">Buy Now</button></a>
             </div>
@@ -207,16 +204,17 @@ export default {
             team: [{
                     username: 'surpassinggoogle',
                     position: 'Founder',
-                    desc: 'The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’'
+                    desc: 'The founder and visonary behind the Teardrops token.'
+                },
+                {
+                    username: 'eastmael',
+                    position: 'Developer',
+                    desc: 'Helping to build the future on Ulogs.'
                 },
                 {
                     username: 'tobias-g',
                     position: 'Developer',
-                    desc: 'Developing over 5 years and a fundamental part of the Steem Gigs development.’'
-                }, {
-                    username: 'eastmael',
-                    position: 'Developer',
-                    desc: 'Experienced developer with many years of experiences, built the foundation for Ulogs.’'
+                    desc: 'Developer and regular contributor to Steem Gigs platform.'
                 }
             ]
         }
