@@ -42,7 +42,6 @@ h4 {
 }
 
 p {
-    font-weight: lighter;
     line-height: 25px;
     font-size: 14px;
 }
