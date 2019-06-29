@@ -127,7 +127,7 @@
     <!-- Buy Section -->
     <section class="buy" id="buy">
         <div class="overlay">
-            <div class="details pad-20">
+            <div class="details">
                 <h2>Buy <br> <strong>Teardrops</strong></h2>
                 <p>
                     The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’. It will
@@ -245,10 +245,10 @@ export default {
             width: 100%;
 
             img {
-                width: 50%;
+                width: 75%;
                 display: block;
-                margin: auto;
-                min-width: 250px;
+                margin: 175px auto auto auto;
+                max-width: 750px;
             }
         }
     }
@@ -274,8 +274,8 @@ export default {
                 background: rgba(95, 189, 216, 0.93);
 
                 .details {
-                    width: 50%;
-                    min-width: 250px;
+                    width: 75%;
+                    max-width: 750px;
                     padding: 50px;
                     color: white;
                 }
@@ -287,8 +287,8 @@ export default {
         background: linear-gradient(180deg, #F7F7F7 80%, #fff 00%);
 
         .description-row {
-            width: 50%;
-            min-width: 250px;
+            width: 75%;
+            max-width: 750px;
             margin: auto;
             display: block;
             padding-bottom: 0;
@@ -305,16 +305,16 @@ export default {
                 background: #fff;
                 width: fit-content;
                 margin: auto;
-                width: 50%;
-                min-width: 250px;
+                width: 75%;
+                max-width: 750px;
             }
         }
     }
 
     .communities {
         .header-desc {
-            width: 50%;
-            min-width: 250px;
+            width: 75%;
+            max-width: 750px;
             margin: auto;
         }
     }
@@ -331,7 +331,8 @@ export default {
 
             .details {
                 width: 35%;
-                min-width: 250px;
+                max-width: 750px;
+                padding: 50px;
             }
         }
     }
@@ -373,8 +374,8 @@ export default {
 
     .team {
         .details {
-            width: 50%;
-            min-width: 250px;
+            width: 75%;
+            max-width: 750px;
             margin: auto;
 
             h2 {
@@ -392,8 +393,8 @@ export default {
             background: rgba(33, 20, 44, 0.93);
 
             .details {
-                width: 50%;
-                min-width: 250px;
+                width: 75%;
+                max-width: 750px;
                 display: block;
                 margin: auto;
             }
@@ -404,8 +405,8 @@ export default {
         background: #F7F7F7;
 
         .mail-container {
-            width: 50%;
-            min-width: 250px;
+            width: 75%;
+            max-width: 750px;
             display: block;
             margin: auto;
 
@@ -458,6 +459,17 @@ export default {
 @media only screen and (max-width: 992px) {
     .img-column {
         display: none;
+    }
+    .pad-20 {
+        padding: 20px;
+    }
+    .details {
+        width: 75% !important;
+    }
+    .home .hero .overlay img {
+        padding: 18px;
+        width: 90%;
+        min-width: initial;
     }
 }
 </style>
