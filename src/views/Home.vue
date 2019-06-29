@@ -12,7 +12,7 @@
             <el-col class="img-column" :xs="8" :sm="8" :md="8" :lg="8" :xl="8">
                 <div class="overlay"></div>
             </el-col>
-            <el-col :xs="24" :sm="24" :md="16" :lg="16" :xl="16" class="about">
+            <el-col :xs="24" :sm="24" :md="24" :lg="16" :xl="16" class="about">
                 <div class="overlay">
                     <div class="details">
                         <h2>Rewarding <br> Proof of <br> <strong>Tears</strong></h2>
@@ -254,13 +254,14 @@ export default {
     }
 
     .info {
+        max-height: 450px;
         .img-column {
             background-image: url(../assets/img/computer-back.png);
             background-repeat: no-repeat;
             background-size: cover;
-
+            max-height: 405px;
             .overlay {
-                height: 443.5px;
+                height: stretch;
                 background: rgba(255, 255, 255, 0.75);
             }
         }
@@ -456,10 +457,13 @@ export default {
     }
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1250px) {
     .img-column {
         display: none;
     }
+}
+
+@media only screen and (max-width: 992px) {
     .pad-20 {
         padding: 20px;
     }
