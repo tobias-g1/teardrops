@@ -5,7 +5,7 @@
     </div>
         <h3>{{ header }}</h3>
         <p>{{ desc }}</p>
-        <a :href="url" target="_blank"><button :disabled="active" class="primary"> {{ buttonText }} </button></a>
+        <a :href="url" target="_blank"><button :disabled="!active" class="primary"> {{ buttonText }} </button></a>
     </div>
 </template>
 

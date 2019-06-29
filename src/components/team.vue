@@ -4,7 +4,7 @@
     <h4> {{ username }} </h4>
     <h5> {{ position }} </h5>
     <p> {{ desc }} </p>
-    <button class="outline blue">View More</button>
+    <a :href="link" target="_blank" rel="noopener noreferrer"><button class="outline blue">View More</button></a>
 </div>
 </template>
 
@@ -19,6 +19,9 @@ export default {
     computed: {
         userImage() {
             return `https://steemitimages.com/u/${this.username}/avatar`
+        },
+        link() {
+            return `https://steemit.com/@${this.username}`
         }
     }
 }
