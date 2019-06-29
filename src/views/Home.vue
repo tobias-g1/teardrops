@@ -1,5 +1,6 @@
 <template>
 <div class="home">
+    <navbar />
     <!-- Hero Section -->
     <section class="hero">
         <div class="overlay">
@@ -7,7 +8,7 @@
         </div>
     </section>
     <!-- Info Section -->
-    <section class="info">
+    <section class="info" id="about">
         <el-row :gutter="0">
             <el-col class="img-column" :xs="8" :sm="8" :md="8" :lg="8" :xl="8">
                 <div class="overlay"></div>
@@ -50,27 +51,27 @@
         </el-row>
     </section>
     <!-- Communities Section -->
-    <section class="communities">
+    <section class="communities" id="communities">
         <div class="flex-center center">
             <div class="header-desc">
-            <h2>Our <strong>Communties</strong></h2>
-            <p>
-                The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’. It will
-                power three steem-based social-network platforms namely; ULOGS.ORG, STEEMGIGS.ORG &
-                MACROHARD, all of which apply a ‘mining the human’ model.
-            </p>
+                <h2>Our <strong>Communties</strong></h2>
+                <p>
+                    The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’. It will
+                    power three steem-based social-network platforms namely; ULOGS.ORG, STEEMGIGS.ORG &
+                    MACROHARD, all of which apply a ‘mining the human’ model.
+                </p>
             </div>
             <el-row :gutter="0">
-            <div>
-                <el-col v-for="(community, index) in communities" :key="index" :xs="8" :sm="8" :md="8" :lg="8" :xl="8">
-                    <community  :header="community.header" :desc="community.desc" :image="community.image" :active="community.active" :buttonText="community.buttonText" :url="community.url" />
-                </el-col>
-            </div>
-        </el-row>
+                <div>
+                    <el-col v-for="(community, index) in communities" :key="index" :xs="8" :sm="8" :md="8" :lg="8" :xl="8">
+                        <community :header="community.header" :desc="community.desc" :image="community.image" :active="community.active" :buttonText="community.buttonText" :url="community.url" />
+                    </el-col>
+                </div>
+            </el-row>
         </div>
     </section>
     <!-- Certified Section -->
-    <section class="certified flex-center">
+    <section class="certified flex-center" id="certified">
         <div class="overlay">
             <div class="details center pad-20">
                 <h2>Get <strong>Certified</strong></h2>
@@ -91,28 +92,15 @@
                 The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’. It will
                 power three steem-based.
             </p>
-             <el-row :gutter="0">
-            <el-col v-for="(member, index) in team" :key="index" :xs="8" :sm="8" :md="8" :lg="8" :xl="8">
-                <team :username="member.username" :position="member.position" :desc="member.desc" />
-            </el-col>
-             </el-row>
-        </div>
-    </section>
-    <!-- Buy Section -->
-    <section class="buy">
-        <div class="overlay">
-            <div class="details pad-20">
-                <h2>Buy <br> <strong>Teardrops</strong></h2>
-                <p>
-                    The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’. It will
-                    power three steem-based.
-                </p>
-                <button class="outline">Buy Now</button>
-            </div>
+            <el-row :gutter="0">
+                <el-col v-for="(member, index) in team" :key="index" :xs="8" :sm="8" :md="8" :lg="8" :xl="8">
+                    <team :username="member.username" :position="member.position" :desc="member.desc" />
+                </el-col>
+            </el-row>
         </div>
     </section>
     <!-- Support Section -->
-    <section class="support">
+    <section class="support" id="support">
         <el-row :gutter="0">
             <el-col :xs="12" :sm="12" :md="12" :lg="12" :xl="12" class="delegate">
                 <div class="overlay">
@@ -140,6 +128,19 @@
             </el-col>
         </el-row>
     </section>
+    <!-- Buy Section -->
+    <section class="buy" id="buy">
+        <div class="overlay">
+            <div class="details pad-20">
+                <h2>Buy <br> <strong>Teardrops</strong></h2>
+                <p>
+                    The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’. It will
+                    power three steem-based.
+                </p>
+                <button class="outline">Buy Now</button>
+            </div>
+        </div>
+    </section>
     <!-- Mail List Section -->
     <section>
         <div class="pad-20 flex-center center">
@@ -156,53 +157,57 @@
 <script>
 import community from '@/components/community.vue'
 import team from '@/components/team.vue'
+import navbar from '@/components/nav.vue'
 export default {
     name: "home",
+    components: {
+        community,
+        team,
+        navbar
+    },
     data() {
         return {
             communities: [{
-                header: 'Steem Gigs',
-                desc: 'The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’. ',
-                image: require("@/assets/img/steemgigs.png"),
-                buttonText: 'Explore',
-                url: 'https://steemgigs.org',
-                active: true
-            },
-            {
-                header: 'Ulogs',
-                desc: 'The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’. ',
-                image: require("@/assets/img/ulogs.png"),
-                buttonText: 'Explore',
-                url: 'www.google.com',
-                active: true
-            },
-            {
-                header: 'Macrohand',
-                desc: 'The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’. ',
-                image: require("@/assets/img/macro.png"),
-                buttonText: 'Coming Soon',
-                url: 'www.google.com',
-                active: false
-            }],
+                    header: 'Steem Gigs',
+                    desc: 'The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’. ',
+                    image: require("@/assets/img/steemgigs.png"),
+                    buttonText: 'Explore',
+                    url: 'https://steemgigs.org',
+                    active: true
+                },
+                {
+                    header: 'Ulogs',
+                    desc: 'The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’. ',
+                    image: require("@/assets/img/ulogs.png"),
+                    buttonText: 'Explore',
+                    url: 'www.google.com',
+                    active: true
+                },
+                {
+                    header: 'Macrohand',
+                    desc: 'The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’. ',
+                    image: require("@/assets/img/macro.png"),
+                    buttonText: 'Coming Soon',
+                    url: 'www.google.com',
+                    active: false
+                }
+            ],
             team: [{
-                username: 'surpassinggoogle',
-                position: 'Founder',
-                desc: 'The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’'
-            },
-            {
-                username: 'tobias-g',
-                position: 'Developer',
-                desc: 'The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’'
-            },{
-                username: 'eastmael',
-                position: 'Developer',
-                desc: 'The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’'
-            }]
+                    username: 'surpassinggoogle',
+                    position: 'Founder',
+                    desc: 'The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’'
+                },
+                {
+                    username: 'tobias-g',
+                    position: 'Developer',
+                    desc: 'The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’'
+                }, {
+                    username: 'eastmael',
+                    position: 'Developer',
+                    desc: 'The teardrops SMT is an emblem of human & breakthrough token to reward ‘proof of tears’'
+                }
+            ]
         }
-    },
-    components: {
-        community,
-        team
     }
 };
 </script>
@@ -267,16 +272,19 @@ export default {
 
     .video {
         background: linear-gradient(180deg, #F7F7F7 80%, #fff 00%);
+
         .description-row {
             width: 50%;
             min-width: 400px;
             margin: auto;
             display: block;
             padding-bottom: 0;
+
             h2 {
                 color: rgba(95, 189, 216, 1);
             }
         }
+
         div {
             .video-container {
                 padding: 20px;
@@ -296,79 +304,79 @@ export default {
         }
     }
 
-.buy {
-    background-image: url(../assets/img/buy.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #fff;
-    background-position: center;
-
-    .overlay {
-        background: rgba(33, 20, 44, 0.75);
-
-        .details {
-            width: 35%;
-            min-width: 400px;
-        }
-    }
-}
-
-.support {
-    color: #fff;
-
-    .delegate {
-        background-image: url(../assets/img/delegate.png);
+    .buy {
+        background-image: url(../assets/img/buy.png);
         background-repeat: no-repeat;
         background-size: cover;
+        color: #fff;
+        background-position: center;
 
         .overlay {
-            background: rgba(95, 189, 216, 0.9);
+            background: rgba(33, 20, 44, 0.75);
 
             .details {
-                width: 75%;
-                padding: 50px;
-            }
-        }
-
-    }
-
-    .vote {
-        background-image: url(../assets/img/vote.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-
-        .overlay {
-            background: rgba(71, 221, 175, 0.9);
-
-            .details {
-                width: 75%;
-                padding: 50px;
+                width: 35%;
+                min-width: 400px;
             }
         }
     }
-}
 
-.team {
-    h2 {
-        color: #5FBDD8;
-    }
-}
+    .support {
+        color: #fff;
 
-.certified {
-    background-image: url(../assets/img/collage.png);
-    background-size: contain;
-    color: white;
+        .delegate {
+            background-image: url(../assets/img/delegate.png);
+            background-repeat: no-repeat;
+            background-size: cover;
 
-    .overlay {
-        background: rgba(33, 20, 44, 0.9);
+            .overlay {
+                background: rgba(95, 189, 216, 0.9);
 
-        .details {
-            width: 50%;
-            min-width: 400px;
-            display: block;
-            margin: auto;
+                .details {
+                    width: 75%;
+                    padding: 50px;
+                }
+            }
+
+        }
+
+        .vote {
+            background-image: url(../assets/img/vote.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            .overlay {
+                background: rgba(71, 221, 175, 0.9);
+
+                .details {
+                    width: 75%;
+                    padding: 50px;
+                }
+            }
         }
     }
-}
+
+    .team {
+        h2 {
+            color: #5FBDD8;
+        }
+    }
+
+    .certified {
+        background-image: url(../assets/img/collage.png);
+        background-size: contain;
+        color: white;
+
+        .overlay {
+            background: rgba(33, 20, 44, 0.9);
+
+            .details {
+                width: 50%;
+                min-width: 400px;
+                display: block;
+                margin: auto;
+            }
+        }
+    }
 }
 </style>
